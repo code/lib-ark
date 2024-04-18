@@ -23,7 +23,7 @@ export const Toaster = (props: ToasterProps) => {
   const api = createMemo(() => toast.group.connect(state, send, normalizeProps))
   const toasts = createMemo(() => api().getToastsByPlacement(placement))
 
-  const mergedProps = mergeProps(api().getGroupProps({ placement }), localProps)
+  const mergedProps = mergeProps(() => api().getGroupProps({ placement }), localProps)
 
   return (
     <ark.div {...mergedProps}>

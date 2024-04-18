@@ -16,7 +16,7 @@ export const Basic = () => {
           toaster.create({
             title: 'Toast Title',
             description: 'Toast Description',
-            type: 'info',
+            type: 'loading',
           })
         }
       >
@@ -26,7 +26,6 @@ export const Basic = () => {
         {(toast) => (
           <Toast.Root key={toast.id}>
             <Toast.Title>{toast.title}</Toast.Title>
-            <Toast.Description>{toast.description}</Toast.Description>
             <Toast.CloseTrigger>
               <XIcon />
             </Toast.CloseTrigger>

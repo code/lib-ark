@@ -4,7 +4,6 @@ import { Toast, Toaster, createToaster } from '../..'
 
 const toaster = createToaster({
   placement: 'bottom-end',
-  overlap: true,
   gap: 24,
 })
 
@@ -15,7 +14,7 @@ export const Update = () => {
     id.current = toaster.create({
       title: 'Loading',
       description: 'Loading ...',
-      type: 'info',
+      type: 'loading',
     })
   }
 
@@ -26,6 +25,7 @@ export const Update = () => {
     toaster.update(id.current, {
       title: 'Success',
       description: 'Success!',
+      type: 'success',
     })
   }
 
