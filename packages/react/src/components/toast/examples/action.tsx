@@ -1,4 +1,4 @@
-import { Toast, Toaster, createToaster } from '../..'
+import { Toast, Toaster, createToaster } from '@ark-ui/react/toast'
 
 const toaster = createToaster({
   placement: 'bottom-end',
@@ -25,18 +25,6 @@ export const Action = () => {
         }
       >
         Add Toast
-      </button>
-      <button
-        type="button"
-        onClick={() =>
-          toaster.create({
-            title: 'Toast Title',
-            description: 'Toast Description',
-            type: 'info',
-          })
-        }
-      >
-        Toast Plain
       </button>
       <Toaster toaster={toaster}>
         {(toast) => (
