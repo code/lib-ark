@@ -1,8 +1,11 @@
 /// <reference types="@testing-library/jest-dom" />
 import '@testing-library/jest-dom'
+import * as matchers from 'vitest-axe/matchers'
+import { expect, vi } from 'vitest'
 import { JSDOM } from 'jsdom'
 import ResizeObserver from 'resize-observer-polyfill'
-import { vi } from 'vitest'
+
+expect.extend(matchers)
 
 const { window } = new JSDOM()
 

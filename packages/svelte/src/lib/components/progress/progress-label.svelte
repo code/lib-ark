@@ -1,8 +1,8 @@
 <script module lang="ts">
   import type { HTMLProps, PolymorphicProps, RefAttribute } from '$lib/types'
 
-  export interface ProgressLabelBaseProps extends PolymorphicProps<'label'>, RefAttribute {}
-  export interface ProgressLabelProps extends HTMLProps<'label'>, ProgressLabelBaseProps {}
+  export interface ProgressLabelBaseProps extends PolymorphicProps<'span'>, RefAttribute {}
+  export interface ProgressLabelProps extends HTMLProps<'span'>, ProgressLabelBaseProps {}
 </script>
 
 <script lang="ts">
@@ -15,4 +15,4 @@
   const mergedProps = $derived(mergeProps(progress().getLabelProps(), props))
 </script>
 
-<Ark as="label" bind:ref {...mergedProps} />
+<Ark as="span" bind:ref {...mergedProps} />

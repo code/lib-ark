@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { LabelHTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
 import type { PolymorphicProps } from '../factory'
 
 export interface RadioGroupLabelBaseProps extends PolymorphicProps {}
@@ -9,7 +9,7 @@ export interface RadioGroupLabelProps
     /**
      * @vue-ignore
      */
-    LabelHTMLAttributes {}
+    HTMLAttributes {}
 </script>
 
 <script setup lang="ts">
@@ -24,7 +24,7 @@ useForwardExpose()
 </script>
 
 <template>
-  <ark.label v-bind="radioGroup.getLabelProps()" :as-child="asChild">
+  <ark.span v-bind="radioGroup.getLabelProps()" :as-child="asChild">
     <slot />
-  </ark.label>
+  </ark.span>
 </template>

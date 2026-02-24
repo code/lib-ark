@@ -6,7 +6,7 @@ import styles from 'styles/popover.module.css'
 
 export const SameWidth = () => (
   <Popover.Root positioning={{ sameWidth: true }}>
-    <Popover.Trigger class={button.Root} style={{ minWidth: '200px' }}>
+    <Popover.Trigger class={button.Root} style={{ 'min-width': '200px' }}>
       Click Me
     </Popover.Trigger>
     <Portal>

@@ -6,6 +6,11 @@ description: All notable changes will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+
+- **Radio Group, Listbox, Progress, Segment Group**: Fixed group labels rendering orphan label elements; now render as
+  `span` per W3C ARIA pattern
+
 ### Added
 
 - **Locale**: Added `useDateFormatter` hook for localized date formatting using `@internationalized/date`

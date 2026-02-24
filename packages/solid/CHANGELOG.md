@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+### Fixed
+
+- **Radio Group, Listbox, Progress, Segment Group**: Fixed group labels rendering orphan label elements; now render as
+  `span` per W3C ARIA pattern
+
 ## [5.32.0] - 2026-02-21
 
 ### Added
