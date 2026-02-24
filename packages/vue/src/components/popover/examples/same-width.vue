@@ -7,17 +7,17 @@ import styles from 'styles/popover.module.css'
 </script>
 
 <template>
-  <Popover.Root closeOnEscape closeOnInteractOutside>
-    <Popover.Trigger :class="button.Root">Click Me</Popover.Trigger>
+  <Popover.Root :positioning="{ sameWidth: true }">
+    <Popover.Trigger :class="button.Root" :style="{ minWidth: '200px' }">Click Me</Popover.Trigger>
     <Teleport to="body">
       <Popover.Positioner :class="styles.Positioner">
         <Popover.Content :class="styles.Content">
           <Popover.CloseTrigger :class="styles.CloseTrigger">
             <XIcon />
           </Popover.CloseTrigger>
-          <Popover.Title :class="styles.Title">Quick Actions</Popover.Title>
+          <Popover.Title :class="styles.Title">Matched Width</Popover.Title>
           <Popover.Description :class="styles.Description">
-            Press Escape or click outside to close this popover.
+            This popover matches the width of its trigger element.
           </Popover.Description>
         </Popover.Content>
       </Popover.Positioner>
