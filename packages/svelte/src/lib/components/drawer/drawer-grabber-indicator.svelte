@@ -2,10 +2,7 @@
   import type { Assign, HTMLProps, PolymorphicProps, RefAttribute } from '$lib/types'
 
   export interface DrawerGrabberIndicatorBaseProps extends PolymorphicProps<'div'>, RefAttribute {}
-  export interface DrawerGrabberIndicatorProps extends Assign<
-    HTMLProps<'div'>,
-    DrawerGrabberIndicatorBaseProps
-  > {}
+  export interface DrawerGrabberIndicatorProps extends Assign<HTMLProps<'div'>, DrawerGrabberIndicatorBaseProps> {}
 </script>
 
 <script lang="ts">

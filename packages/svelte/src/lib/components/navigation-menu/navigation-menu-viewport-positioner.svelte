@@ -19,16 +19,18 @@
 
   import type { Snippet } from 'svelte'
 
-  let { ref = $bindable(null), children, ...props }: NavigationMenuViewportPositionerProps & { children?: Snippet } = $props()
+  let {
+    ref = $bindable(null),
+    children,
+    ...props
+  }: NavigationMenuViewportPositionerProps & { children?: Snippet } = $props()
   const splitViewportProps = createSplitProps<ViewportProps>()
   const [viewportProps, localProps] = $derived(splitViewportProps(props, ['align']))
 
   setNavigationMenuViewportPropsContext(() => viewportProps)
 
   const navigationMenu = useNavigationMenuContext()
-  const mergedProps = $derived(
-    mergeProps(navigationMenu().getViewportPositionerProps(viewportProps), localProps),
-  )
+  const mergedProps = $derived(mergeProps(navigationMenu().getViewportPositionerProps(viewportProps), localProps))
 </script>
 
 <Ark as="div" bind:ref {...mergedProps}>

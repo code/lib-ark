@@ -7,9 +7,7 @@
 </script>
 
 <Popover.Root positioning={{ sameWidth: true }}>
-  <Popover.Trigger class={button.Root} style="min-width: 200px">
-    Click Me
-  </Popover.Trigger>
+  <Popover.Trigger class={button.Root} style="min-width: 200px">Click Me</Popover.Trigger>
   <Portal>
     <Popover.Positioner class={styles.Positioner}>
       <Popover.Content class={styles.Content}>

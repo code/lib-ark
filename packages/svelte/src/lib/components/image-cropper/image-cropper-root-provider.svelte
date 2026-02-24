@@ -5,8 +5,7 @@
   export interface ImageCropperRootProviderBaseProps extends PolymorphicProps<'div'>, RefAttribute {
     value: UseImageCropperReturn
   }
-  export interface ImageCropperRootProviderProps
-    extends Assign<HTMLProps<'div'>, ImageCropperRootProviderBaseProps> {}
+  export interface ImageCropperRootProviderProps extends Assign<HTMLProps<'div'>, ImageCropperRootProviderBaseProps> {}
 </script>
 
 <script lang="ts">

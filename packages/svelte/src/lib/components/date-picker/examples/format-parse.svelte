@@ -1,14 +1,57 @@
 <script lang="ts">
   import { DatePicker } from '@ark-ui/svelte/date-picker'
   import { Portal } from '@ark-ui/svelte/portal'
+  import { CalendarDate, type DateValue } from '@internationalized/date'
   import CalendarIcon from 'lucide-svelte/icons/calendar'
   import ChevronLeftIcon from 'lucide-svelte/icons/chevron-left'
   import ChevronRightIcon from 'lucide-svelte/icons/chevron-right'
   import button from 'styles/button.module.css'
   import styles from 'styles/date-picker.module.css'
+
+  const parse = (value: string) => {
+    const fullRegex = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/
+    const fullMatch = value.match(fullRegex)
+    if (fullMatch) {
+      const [_, day, month, year] = fullMatch.map(Number)
+      try {
+        return new CalendarDate(year + 2000, month, day)
+      } catch {
+        return undefined
+      }
+    }
+
+    const partialRegex = /^(\d{1,2})\/(\d{1,2})$/
+    const partialMatch = value.match(partialRegex)
+    if (partialMatch) {
+      const [_, day, month] = partialMatch.map(Number)
+      const currentYear = new Date().getFullYear()
+      try {
+        return new CalendarDate(currentYear, month, day)
+      } catch {
+        return undefined
+      }
+    }
+
+    const dayRegex = /^(\d{1,2})$/
+    const dayMatch = value.match(dayRegex)
+    if (dayMatch) {
+      const [_, day] = dayMatch.map(Number)
+      const currentYear = new Date().getFullYear()
+      return new CalendarDate(currentYear, 1, day)
+    }
+
+    return undefined
+  }
+
+  const format = (date: DateValue) => {
+    const day = date.day.toString().padStart(2, '0')
+    const month = date.month.toString().padStart(2, '0')
+    const year = (date.year % 100).toString().padStart(2, '0')
+    return `${day}/${month}/${year}`
+  }
 </script>
 
-<DatePicker.Root class={styles.Root}>
+<DatePicker.Root class={styles.Root} {format} {parse} placeholder="dd/mm/yy">
   <DatePicker.Label class={styles.Label}>Label</DatePicker.Label>
   <DatePicker.Control class={styles.Control}>
     <DatePicker.Input class={styles.Input} />

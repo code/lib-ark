@@ -87,11 +87,15 @@ You can combine animations for richer effects. For example, scale with fade:
 
 ```css
 .indicator[data-state='open'] {
-  animation: scale-in 200ms ease-out, fade-in 200ms ease-out;
+  animation:
+    scale-in 200ms ease-out,
+    fade-in 200ms ease-out;
 }
 
 .indicator[data-state='closed'] {
-  animation: scale-out 100ms ease-in, fade-out 100ms ease-in;
+  animation:
+    scale-out 100ms ease-in,
+    fade-out 100ms ease-in;
 }
 ```
 

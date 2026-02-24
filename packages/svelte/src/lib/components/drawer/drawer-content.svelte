@@ -5,10 +5,7 @@
   export interface DrawerContentBaseProps extends PolymorphicProps<'div'>, ContentProps, RefAttribute {
     ref?: Element | null
   }
-  export interface DrawerContentProps extends Assign<
-    Omit<HTMLProps<'div'>, 'draggable'>,
-    DrawerContentBaseProps
-  > {}
+  export interface DrawerContentProps extends Assign<Omit<HTMLProps<'div'>, 'draggable'>, DrawerContentBaseProps> {}
 </script>
 
 <script lang="ts">
