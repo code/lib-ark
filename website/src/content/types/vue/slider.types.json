@@ -185,6 +185,12 @@
         "isRequired": false,
         "description": "The alignment of the slider thumb relative to the track\n- `center`: the thumb will extend beyond the bounds of the slider track.\n- `contain`: the thumb will be contained within the bounds of the track."
       },
+      "thumbCollisionBehavior": {
+        "type": "'none' | 'push' | 'swap'",
+        "defaultValue": "\"none\"",
+        "isRequired": false,
+        "description": "How thumbs behave when they collide during pointer interactions\n- `none`: Thumbs cannot move past each other\n- `push`: Thumbs push each other\n- `swap`: Thumbs swap places"
+      },
       "thumbSize": {
         "type": "{ width: number; height: number }",
         "isRequired": false,

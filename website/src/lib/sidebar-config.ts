@@ -100,6 +100,7 @@ export const sidebarConfig: SidebarGroupConfig[] = [
       { id: 'json-tree-view', title: 'JSON Tree View' },
       { id: 'locale' },
       { id: 'presence' },
+      { id: 'swap' },
     ],
   },
 ]

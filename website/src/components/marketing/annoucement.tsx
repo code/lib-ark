@@ -15,12 +15,12 @@ export const Announcement = () => {
   }
 
   return (
-    <NextLink href="/docs/components/image-cropper">
+    <NextLink href="/docs/utilities/swap">
       <Badge size="lg" variant="outline">
         <Icon color="colorPalette.default">
           <SparklesIcon />
         </Icon>
-        [New] Image Cropper component
+        [New] Swap component
         <ArrowRightIcon />
       </Badge>
     </NextLink>

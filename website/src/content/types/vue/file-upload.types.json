@@ -202,6 +202,7 @@
         "isRequired": false,
         "description": "Whether to prevent the drop event on the document"
       },
+      "readOnly": { "type": "boolean", "isRequired": false, "description": "Whether the file input is read-only" },
       "required": { "type": "boolean", "isRequired": false, "description": "Whether the file input is required" },
       "transformFiles": {
         "type": "(files: File[]) => Promise<File[]>",

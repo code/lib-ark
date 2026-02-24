@@ -220,6 +220,11 @@
         "isRequired": false,
         "description": "The name attribute for the input. Useful for form submissions"
       },
+      "placeholder": {
+        "type": "string",
+        "isRequired": false,
+        "description": "The placeholder text for the input when there are no tags"
+      },
       "readOnly": {
         "type": "boolean",
         "isRequired": false,

@@ -107,6 +107,11 @@
         "description": "Called when the selection changes"
       },
       "quotesOnKeys": { "type": "boolean", "isRequired": false, "description": "Whether to show quotes on the keys." },
+      "scrollToIndexFn": {
+        "type": "(details: ScrollToIndexDetails<JsonNode<any>>) => void",
+        "isRequired": false,
+        "description": "Function to scroll to a specific index.\nUseful for virtualized tree views."
+      },
       "selectedValue": { "type": "string[]", "isRequired": false, "description": "The controlled selected node value" },
       "selectionMode": {
         "type": "'single' | 'multiple'",
@@ -131,7 +136,7 @@
   },
   "JsonTreeViewRootProvider": {
     "props": {
-      "value": { "type": "UseTreeViewReturn<JsonNode<any>>", "isRequired": true },
+      "value": { "type": "UseJsonTreeViewReturn", "isRequired": true },
       "asChild": {
         "type": "boolean",
         "isRequired": false,

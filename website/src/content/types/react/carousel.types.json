@@ -1,17 +1,18 @@
 {
   "AutoplayIndicator": {
     "props": {
-      "paused": {
-        "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...>",
+      "asChild": {
+        "type": "boolean",
         "isRequired": false,
-        "description": "The content to render when autoplay is paused."
+        "description": "Use the provided child element as the default rendered element, combining their props and behavior."
       },
-      "playing": {
+      "fallback": {
         "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...>",
         "isRequired": false,
-        "description": "The content to render when autoplay is playing."
+        "description": "The fallback content to render when autoplay is paused."
       }
-    }
+    },
+    "element": "HTMLSpanElement"
   },
   "AutoplayTrigger": {
     "props": {
@@ -140,6 +141,12 @@
         "defaultValue": "false",
         "isRequired": false,
         "description": "Whether to scroll automatically. The default delay is 4000ms."
+      },
+      "autoSize": {
+        "type": "boolean",
+        "defaultValue": "false",
+        "isRequired": false,
+        "description": "Whether to enable variable width slides."
       },
       "defaultPage": {
         "type": "number",

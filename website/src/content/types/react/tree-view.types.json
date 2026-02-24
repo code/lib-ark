@@ -250,6 +250,11 @@
         "isRequired": false,
         "description": "Called when the selection changes"
       },
+      "scrollToIndexFn": {
+        "type": "(details: ScrollToIndexDetails<T>) => void",
+        "isRequired": false,
+        "description": "Function to scroll to a specific index.\nUseful for virtualized tree views."
+      },
       "selectedValue": { "type": "string[]", "isRequired": false, "description": "The controlled selected node value" },
       "selectionMode": {
         "type": "'multiple' | 'single'",

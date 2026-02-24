@@ -10,10 +10,30 @@
     },
     "element": "HTMLDivElement"
   },
+  "FirstTrigger": {
+    "props": {
+      "asChild": {
+        "type": "boolean",
+        "isRequired": false,
+        "description": "Use the provided child element as the default rendered element, combining their props and behavior."
+      }
+    },
+    "element": "HTMLButtonElement"
+  },
   "Item": {
     "props": {
       "type": { "type": "'page'", "isRequired": true },
       "value": { "type": "number", "isRequired": true },
+      "asChild": {
+        "type": "boolean",
+        "isRequired": false,
+        "description": "Use the provided child element as the default rendered element, combining their props and behavior."
+      }
+    },
+    "element": "HTMLButtonElement"
+  },
+  "LastTrigger": {
+    "props": {
       "asChild": {
         "type": "boolean",
         "isRequired": false,
@@ -49,6 +69,12 @@
         "isRequired": false,
         "description": "Use the provided child element as the default rendered element, combining their props and behavior."
       },
+      "boundaryCount": {
+        "type": "number",
+        "defaultValue": "1",
+        "isRequired": false,
+        "description": "Number of pages to show at the beginning and end"
+      },
       "count": { "type": "number", "isRequired": false, "description": "Total number of data items" },
       "defaultPage": {
         "type": "number",
@@ -68,7 +94,7 @@
         "description": "Function to generate href attributes for pagination links.\nOnly used when `type` is set to \"link\"."
       },
       "ids": {
-        "type": "Partial<{\n  root: string\n  ellipsis: (index: number) => string\n  prevTrigger: string\n  nextTrigger: string\n  item: (page: number) => string\n}>",
+        "type": "Partial<{\n  root: string\n  ellipsis: (index: number) => string\n  firstTrigger: string\n  prevTrigger: string\n  nextTrigger: string\n  lastTrigger: string\n  item: (page: number) => string\n}>",
         "isRequired": false,
         "description": "The ids of the elements in the accordion. Useful for composition."
       },

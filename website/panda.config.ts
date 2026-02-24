@@ -123,6 +123,14 @@ export default defineConfig({
             transform: 'translateY(var(--marquee-translate))',
           },
         },
+        'scale-in': {
+          from: { transform: 'scale(0)' },
+          to: { transform: 'scale(1)' },
+        },
+        'scale-out': {
+          from: { transform: 'scale(1)' },
+          to: { transform: 'scale(0)' },
+        },
       },
       slotRecipes: {
         field,

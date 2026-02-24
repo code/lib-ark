@@ -73,6 +73,58 @@
     }
   },
   "Root": {
+    "emits": {
+      "exitComplete": {
+        "type": "[]",
+        "isRequired": true,
+        "description": "Function called when the animation ends in the closed state"
+      },
+      "openChange": {
+        "type": "[details: OpenChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the panel is opened or closed"
+      },
+      "positionChange": {
+        "type": "[details: PositionChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the position of the panel changes via dragging"
+      },
+      "positionChangeEnd": {
+        "type": "[details: PositionChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the position of the panel changes via dragging ends"
+      },
+      "sizeChange": {
+        "type": "[details: SizeChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the size of the panel changes via resizing"
+      },
+      "sizeChangeEnd": {
+        "type": "[details: SizeChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the size of the panel changes via resizing ends"
+      },
+      "stageChange": {
+        "type": "[details: StageChangeDetails]",
+        "isRequired": true,
+        "description": "Function called when the stage of the panel changes"
+      },
+      "update:open": {
+        "type": "[open: boolean]",
+        "isRequired": true,
+        "description": "Function called when the panel is opened or closed"
+      },
+      "update:position": {
+        "type": "[details: Point]",
+        "isRequired": true,
+        "description": "Function called when the position of the panel changes via dragging"
+      },
+      "update:size": {
+        "type": "[details: Size]",
+        "isRequired": true,
+        "description": "Function called when the size of the panel changes via resizing"
+      }
+    },
     "props": {
       "allowOverflow": {
         "type": "boolean",
@@ -179,6 +231,13 @@
     }
   },
   "RootProvider": {
+    "emits": {
+      "exitComplete": {
+        "type": "[]",
+        "isRequired": true,
+        "description": "Function called when the animation ends in the closed state"
+      }
+    },
     "props": {
       "value": { "type": "FloatingPanelApi<PropTypes>", "isRequired": true },
       "lazyMount": {

@@ -109,6 +109,11 @@
       },
       "quotesOnKeys": { "type": "boolean", "isRequired": false, "description": "Whether to show quotes on the keys." },
       "ref": { "type": "Element", "isRequired": false },
+      "scrollToIndexFn": {
+        "type": "(details: ScrollToIndexDetails<JsonNode<any>>) => void",
+        "isRequired": false,
+        "description": "Function to scroll to a specific index.\nUseful for virtualized tree views."
+      },
       "selectedValue": { "type": "string[]", "isRequired": false, "description": "The controlled selected node value" },
       "selectionMode": {
         "type": "'single' | 'multiple'",

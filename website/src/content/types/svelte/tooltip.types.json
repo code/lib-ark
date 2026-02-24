@@ -42,7 +42,6 @@
   },
   "Root": {
     "props": {
-      "id": { "type": "string", "isRequired": true, "description": "The unique identifier of the machine." },
       "aria-label": { "type": "string", "isRequired": false, "description": "Custom label for the tooltip." },
       "closeDelay": {
         "type": "number",
@@ -80,6 +79,7 @@
         "description": "The initial open state of the tooltip when rendered.\nUse when you don't need to control the open state of the tooltip."
       },
       "disabled": { "type": "boolean", "isRequired": false, "description": "Whether the tooltip is disabled" },
+      "id": { "type": "string", "isRequired": false, "description": "The unique identifier of the machine." },
       "ids": {
         "type": "Partial<{ trigger: string; content: string; arrow: string; positioner: string }>",
         "isRequired": false,
