@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useAsyncList } from '@ark-ui/vue/collection'
-import { type Combobox, createListCollection } from '@ark-ui/vue/combobox'
+// biome-ignore lint/style/useImportType: intentional
+import { Combobox, createListCollection } from '@ark-ui/vue/combobox'
 import { CheckIcon, ChevronsUpDownIcon, LoaderIcon, XIcon } from 'lucide-vue-next'
 import { computed } from 'vue'
 import styles from 'styles/combobox.module.css'
