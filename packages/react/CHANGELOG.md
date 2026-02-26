@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [5.33.0] - 2026-02-26
+
 ### Added
 
 - **Date Picker**: Added non-Gregorian calendar support via `createCalendar` prop (Persian, Buddhist, Islamic, Hebrew,
