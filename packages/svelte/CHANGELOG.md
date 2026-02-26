@@ -6,6 +6,8 @@ description: All notable changes will be documented in this file.
 
 ## [Unreleased]
 
+## [5.18.0] - 2026-02-26
+
 ### Added
 
 - **Date Picker**: Added non-Gregorian calendar support via `createCalendar` prop (Persian, Buddhist, Islamic, Hebrew,
