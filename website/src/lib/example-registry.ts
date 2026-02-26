@@ -112,6 +112,7 @@ import * as Combobox_Virtualized from '@examples/combobox/examples/virtualized'
 import * as Combobox_WithField from '@examples/combobox/examples/with-field'
 import * as DatePicker_Basic from '@examples/date-picker/examples/basic'
 import * as DatePicker_Controlled from '@examples/date-picker/examples/controlled'
+import * as DatePicker_CustomCalendar from '@examples/date-picker/examples/custom-calendar'
 import * as DatePicker_DefaultValue from '@examples/date-picker/examples/default-value'
 import * as DatePicker_DefaultView from '@examples/date-picker/examples/default-view'
 import * as DatePicker_FixedWeeks from '@examples/date-picker/examples/fixed-weeks'
@@ -673,6 +674,7 @@ const exampleModules: Record<string, ExampleModule> = {
   'combobox/with-field': Combobox_WithField,
   'date-picker/basic': DatePicker_Basic,
   'date-picker/controlled': DatePicker_Controlled,
+  'date-picker/custom-calendar': DatePicker_CustomCalendar,
   'date-picker/default-value': DatePicker_DefaultValue,
   'date-picker/default-view': DatePicker_DefaultView,
   'date-picker/fixed-weeks': DatePicker_FixedWeeks,
