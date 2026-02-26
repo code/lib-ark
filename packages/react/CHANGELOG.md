@@ -1,7 +1,34 @@
 ## [Unreleased]
 
+### Added
+
+- **Date Picker**: Added non-Gregorian calendar support via `createCalendar` prop (Persian, Buddhist, Islamic, Hebrew,
+  and other calendar systems)
+
+  ```jsx
+  import { PersianCalendar } from "@internationalized/date"
+
+  function createCalendar(identifier) {
+    switch (identifier) {
+      case "persian":
+        return new PersianCalendar()
+      default:
+        throw new Error(`Unsupported calendar: ${identifier}`)
+    }
+  }
+
+  <DatePicker.Root locale="fa-IR" createCalendar={createCalendar}>
+    {/* ... */}
+  </DatePicker.Root>
+  ```
+- **Date Picker**: Added `data-type` attribute to weekend table header and cell
+
 ### Fixed
 
+- **Combobox**: Fixed `onValueChange` returning empty `items` array when using controlled value
+- **Popover**: Fixed nested popover z-index layering
+- **Toast**: Fixed types to ensure `parent`/`index` are exposed as props and `expand`/`collapse` are exposed on the
+  store
 - **Radio Group, Listbox, Progress, Segment Group**: Fixed group labels rendering orphan label elements; now render as
   `span` per W3C ARIA pattern
 

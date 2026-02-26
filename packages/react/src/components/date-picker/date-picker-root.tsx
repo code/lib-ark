@@ -16,6 +16,7 @@ export const DatePickerRoot = forwardRef<HTMLDivElement, DatePickerRootProps>((p
   const [presenceProps, datePickerProps] = splitPresenceProps(props)
   const [useDatePickerProps, localProps] = splitRootProps(datePickerProps, [
     'closeOnSelect',
+    'createCalendar',
     'defaultFocusedValue',
     'defaultOpen',
     'defaultValue',
