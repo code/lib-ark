@@ -94,6 +94,7 @@ export const sidebarConfig: SidebarGroupConfig[] = [
       { id: 'focus-trap' },
       { id: 'format-byte' },
       { id: 'format-number' },
+      { id: 'format-time' },
       { id: 'format-relative-time' },
       { id: 'frame' },
       { id: 'highlight' },

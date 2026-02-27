@@ -4,3 +4,4 @@ export {
   FormatRelativeTime as RelativeTime,
   type FormatRelativeTimeProps as RelativeTimeProps,
 } from './format-relative-time'
+export { FormatTime as Time, type FormatTimeProps as TimeProps } from './format-time'

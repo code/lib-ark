@@ -22,3 +22,8 @@ export { NumberWithUnit } from './examples/number-with-unit'
 
 export { RelativeTimeBasic } from './examples/relative-time-basic'
 export { RelativeTimeShort } from './examples/relative-time-short'
+export { TimeBasic } from './examples/time-basic'
+export { TimeWithAmPmLabels } from './examples/time-with-am-pm-labels'
+export { TimeWithDate } from './examples/time-with-date'
+export { TimeWithLocale } from './examples/time-with-locale'
+export { TimeWithSeconds } from './examples/time-with-seconds'

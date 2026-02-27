@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+### Added
+
+- **Format**: Added `Format.Time` for formatting time values and examples for basic, date input, seconds, custom AM/PM
+  labels, and locale
+
 ### Fixed
 
 - **Build**: Fixed CJS build issues in downstream Zag.js packages

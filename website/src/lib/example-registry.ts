@@ -229,6 +229,11 @@ import * as Format_NumberWithPercentage from '@examples/format/examples/number-w
 import * as Format_NumberWithUnit from '@examples/format/examples/number-with-unit'
 import * as Format_RelativeTimeBasic from '@examples/format/examples/relative-time-basic'
 import * as Format_RelativeTimeShort from '@examples/format/examples/relative-time-short'
+import * as Format_TimeBasic from '@examples/format/examples/time-basic'
+import * as Format_TimeWithAmPmLabels from '@examples/format/examples/time-with-am-pm-labels'
+import * as Format_TimeWithDate from '@examples/format/examples/time-with-date'
+import * as Format_TimeWithLocale from '@examples/format/examples/time-with-locale'
+import * as Format_TimeWithSeconds from '@examples/format/examples/time-with-seconds'
 import * as Frame_Basic from '@examples/frame/examples/basic'
 import * as Frame_InheritStyles from '@examples/frame/examples/inherit-styles'
 import * as Frame_Script from '@examples/frame/examples/script'
@@ -791,6 +796,11 @@ const exampleModules: Record<string, ExampleModule> = {
   'format/number-with-unit': Format_NumberWithUnit,
   'format/relative-time-basic': Format_RelativeTimeBasic,
   'format/relative-time-short': Format_RelativeTimeShort,
+  'format/time-basic': Format_TimeBasic,
+  'format/time-with-am-pm-labels': Format_TimeWithAmPmLabels,
+  'format/time-with-date': Format_TimeWithDate,
+  'format/time-with-locale': Format_TimeWithLocale,
+  'format/time-with-seconds': Format_TimeWithSeconds,
   'frame/basic': Frame_Basic,
   'frame/inherit-styles': Frame_InheritStyles,
   'frame/script': Frame_Script,
