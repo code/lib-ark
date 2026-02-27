@@ -6,6 +6,12 @@ description: All notable changes will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+
+- **Build**: Fixed CJS build issues in downstream Zag.js packages
+- **Download Trigger**: Fixed window resolution to use environment context in custom environments (for example,
+  iframes)
+
 ## [5.18.0] - 2026-02-26
 
 ### Added

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Assign, HTMLProps, PolymorphicProps, RefAttribute } from '$lib/types'
-  import { getWindow } from '@zag-js/dom-query'
+  import { useEnvironmentContext } from '$lib/providers/environment'
   import { type FileMimeType, downloadFile } from '@zag-js/file-utils'
   import { isFunction } from '@zag-js/utils'
   import { Ark } from '../factory'
@@ -17,13 +17,14 @@
   export interface DownloadTriggerProps extends Assign<HTMLProps<'button'>, DownloadTriggerBaseProps> {}
 
   let { ref = $bindable(null), fileName, data, mimeType, onclick, ...restProps }: DownloadTriggerProps = $props()
+  const env = useEnvironmentContext()
 
   const download = (fileData: DownloadableData, win: Window & typeof globalThis) => {
     downloadFile({ file: fileData, name: fileName, type: mimeType, win })
   }
 
   const handleClick = (e: MouseEvent & { currentTarget: HTMLButtonElement }) => {
-    const win = getWindow(e.currentTarget)
+    const win = env().getWindow()
     onclick?.(e)
     if (e.defaultPrevented) return
 

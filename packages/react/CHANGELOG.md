@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+### Fixed
+
+- **Build**: Fixed CJS build issues in downstream Zag.js packages
+
 ## [5.33.0] - 2026-02-26
 
 ### Added
