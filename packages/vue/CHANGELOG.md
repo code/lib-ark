@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [5.34.0] - 2026-02-27
+
 ### Added
 
 - **Format**: Added `Format.Time` for formatting time values and examples for basic, date input, seconds, custom AM/PM
