@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+### Fixed
+
+- **Menu**: Fixed `MenuCheckboxItem` to use `getOptionItemState` for `optionItemState` context lookup
+
 ## [5.34.0] - 2026-02-27
 
 ### Added
