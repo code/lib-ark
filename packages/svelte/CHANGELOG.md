@@ -1,5 +1,12 @@
 # @ark-ui/svelte
 
+## [5.20.1] - 2026-03-30
+
+### Fixed
+
+- Fix `lazyMount` and `unmountOnExit` not working for backdrop in Dialog, Drawer, NavigationMenu, Tabs, and Tour
+  components.
+
 ## [5.20.0] - 2026-03-26
 
 ### Added
